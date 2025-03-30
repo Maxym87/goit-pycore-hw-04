@@ -10,6 +10,12 @@ def get_cats_info(path):
 
                 if len(parts) == 3:
                     cat_id, name, age = parts
+
                     cat_info = {'id' : cat_id, 'name' : name, 'age' : age}
+
+                    cats_list.append(cat_info)
+
     except FileNotFoundError:
         print('File not found')
+
+    return cats_list
